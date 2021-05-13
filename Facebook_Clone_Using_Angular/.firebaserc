@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fb-clone-c7145": {
+      "hosting": {
+        "fb-clone": [
+          "fb-clone-c7145"
+        ]
+      }
+    }
+  }
+}

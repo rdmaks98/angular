@@ -1,0 +1,19 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>{{ "check" }}</th>
+            <th>{{ "Title" }}</th>
+            <th>{{ "Date" }}</th>
+            <th>{{ "Delete" }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todo"> 
+            <td><input (change)="changeTodoStatus(todo)" type="checkbox" [checked]="todo.isComplete"></td>
+            <td [ngClass]="{completeTodo : todo.isComplete }">{{ todo.title | uppercase }}</td>
+            <td>{{ todo.date | date:"dd/mm/yy" }}</td>
+            <td><p (click)="deleteTodo(todo)">Delete</p></td>
+        </tr>
+    </tbody>
+</table>

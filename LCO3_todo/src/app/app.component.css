@@ -1,0 +1,23 @@
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+*,
+*::after,
+*::before
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color:#222222;
+}
+h1
+{
+    text-align: center;
+    background-color: black;
+    color: darkkhaki;
+    text-decoration: underline;
+}

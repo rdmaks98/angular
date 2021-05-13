@@ -1,0 +1,28 @@
+<router-outlet>
+
+<div class="div">
+    <h1>{{title}}</h1>
+    <p>{{addname}}</p>
+    <!-- {{template}} -->
+    <u>hello ng</u>
+    <h3>Counter App</h3>
+    <h3>Counter number start is {{ count }}</h3>
+    <div class="div_btns">
+        <button (click)="handleincrease()">increase</button>
+        <button (click)="handledecrease()">decrease</button>
+        <button (click)="handleReset()">reset</button>
+    </div>
+</div>
+<div class="div container w-50 mt-5 text-center">
+    <h2>{{second}}</h2>
+    <div class="text-center display-3 m-3 text-white">Word limit : {{limits}}</div>
+    <input ng-change="handleSlideChange($event.target.value)" type="range" min="1" max="50" value="{{ limits }}" class="slider form-control-range"/>
+    <button class="btn btn-warning" (click)="generate()">Count</button>
+    <div *ngIf="words" class="card card-body">
+        <p class="display-4 mt-10">&nbsp;&nbsp;{{ words }}</p>
+    </div>
+</div>
+</router-outlet>
+
+<a routerLink="/game">Game</a>
+

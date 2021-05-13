@@ -1,0 +1,56 @@
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+h1
+{
+    text-align: center;
+    color:deeppink;
+}
+
+p{
+    font-variant: small-caps;
+    background-color: rgb(83, 182, 136);
+}
+
+.div{
+    /* height:100%; */
+    background-repeat: no-repeat;
+    height:420px;
+    background-image:url(../assets/images.jpg);
+    
+}
+
+h3{
+    text-align: center;
+    font-weight: 20px;
+}
+
+.div_btns{
+    position: relative;
+    margin-left:450px;
+    padding:0px;
+    align-items: center;
+}
+
+button{
+    background-color: black;
+    color:deepskyblue;
+    width: 110px;
+    font-variant-caps:petite-caps;
+    margin:20px;
+    padding:20px;
+}
+
+/* game */
+/* .bimg
+{
+    background-image: url(../assets/game.jpg);
+    height:400px;
+}
+
+.game_Card
+{
+    box-shadow: 0 4px 8px 0 rgba(141, 126, 126, 0.2);
+    transition: 0.4s;
+    width:20%;
+    border-radius:2px;
+} */

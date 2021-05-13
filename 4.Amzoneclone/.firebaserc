@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "amzoneclone-6630f": {
+      "hosting": {
+        "game": [
+          "amzoneclone-6630f"
+        ]
+      }
+    }
+  }
+}

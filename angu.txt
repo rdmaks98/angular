@@ -1,0 +1,4 @@
+D:\wamp64\www\learning
+https://www.w3adda.com/blog/angularjs-crud-php-mysql-rest-api-webservice-example
+https://w3path.com/angular-8-app-crud-operation-tutorial-from-scratch/
+https://bezkoder.com/angular-10-crud-app/angulari
