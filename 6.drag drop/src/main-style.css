@@ -1,0 +1,8 @@
+/* GLOBAL STYLES */
+html,
+body {
+  height: 100%;
+  background-image: url("./assets/background.svg");
+  background-size: cover;
+  overflow-y: auto !important;
+}

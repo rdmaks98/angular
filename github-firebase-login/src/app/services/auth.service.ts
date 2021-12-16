@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFireAuth } from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root'
@@ -25,6 +24,6 @@ export class AuthService {
   
   signOut()
   {
-    
+    return this.auth.signOut();
   }
 }

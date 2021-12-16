@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { GithbService } from 'src/app/services/githb.service';
 
 @Component({
   selector: 'app-usercard',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usercard.component.css']
 })
 export class UsercardComponent implements OnInit {
-
-  constructor() { }
+  @Input() 
+  user : string | undefined;
+  constructor(private ref : ChangeDetectorRef,private githbservice:GithbService) {}
 
   ngOnInit(): void {
   }

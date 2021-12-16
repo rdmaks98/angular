@@ -9,8 +9,9 @@ import { GithbService } from './../../services/githb.service';
 
 export class ReposComponent implements OnInit {
 
-  @Input() repoUrl:string;
-  repos = [];
+  @Input()  
+  repoUrl: string | undefined;
+  repos : any[] = [];
   
   constructor(public githbservice:GithbService,private ref:ChangeDetectorRef) { }
 
@@ -20,11 +21,14 @@ export class ReposComponent implements OnInit {
   {
     if(this.repoUrl)
     {
-      this.githbservice.getRepos(this.repoUrl).subscribe(
-        (repos: []) => {
-          this.repos = repos;
+      this.githbservice.getRepos(this.repoUrl).subscribe(repos => {
+          repos = this.repos;
+          this.ref.detectChanges();
+        },
+        (err) => {
+          console.log(err);
         }
-      )
+      );
     }
   }
 

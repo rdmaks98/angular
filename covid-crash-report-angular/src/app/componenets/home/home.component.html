@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="text-center mt-4">Corona Covide-19 Tracker</h2>
+    <hr>
+    <h4 class="mt-4 text-center">COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+    </h4>
+    <app-dashboard [totalConfirmed]="totalconfirmed" [totalActive]="totalactive" [totalDeath]="totaldeath" [totalRecovered]="totalrecovered"></app-dashboard>
+</div><hr>
+<mat-label>Please Choose Case Type:</mat-label>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="c" id="c"  (click)="updateChart(c)" #c name="caseType" class="m-2">Confirmed</mat-radio-button>
+        <mat-radio-button value="a"  id="a" (click)="updateChart(a)" #a name="caseType" class="m-2">Active</mat-radio-button>
+        <mat-radio-button value="r" id="r" (click)="updateChart(r)" #r name="caseType" class="m-2">Recovered</mat-radio-button>
+        <mat-radio-button value="d" id="d" (click)="updateChart(d)" #d name="caseType" class="m-2">Death</mat-radio-button>
+    </mat-radio-group>
+<div class="row">
+    <div class="col">
+        <google-chart [data]="pieChart"></google-chart>
+    </div>
+    <div class="col">
+        <google-chart [data]="columnChart"></google-chart>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container active">
+    <h1 class="text-center mt-4">Corona Covid-19 Tracker Country Wise</h1><hr>
+    <div class="form-group text-center row">
+          <div class="col-md-2">
+            <mat-label>Selct country</mat-label>
+            <select class="form-control" id="c" #input (change)="updatevalues(input.value)">
+              <option value="{{ c }}" class="form-control" *ngFor="let c of countries">{{ c }}</option>
+            </select>
+          </div>
+          <app-dashboard [totalConfirmed]="totalConfirmed" [totalActive]="totalActive" [totalDeath]="totalDeath" [totalRecovered]="totalRecoverd"></app-dashboard>
+        
+          
+          <div class="card row">
+            <div class="col">
+              <google-chart [data]="lineChart"></google-chart>
+            </div>
+            <table class="table col">
+              <thead>
+                <th>sr.no</th>
+                <th>Date</th>
+                <th>Case</th>
+              </thead>
+              <tbody>
+                <tr *ngFor='let cs of selectCountry; index as i;'>
+                  <td>{{ i+1 }}</td>
+                  <td>{{ cs.date | date }}</td>
+                  <td>{{ cs.cases }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>

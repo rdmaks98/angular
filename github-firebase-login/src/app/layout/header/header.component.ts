@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  email = null;
+  email:any = null;
   constructor(private auth:AuthService,private router:Router,private toastr: ToastrService) {
     auth.getUser().subscribe((user) => {
       this.email = user?.email;

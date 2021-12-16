@@ -11,9 +11,11 @@ import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.compone
 import { HomeComponent } from './pages/home/home.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
+
 // HttpClient
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
 // firebase
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
@@ -37,12 +39,11 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClient,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase,'github-firebase-login'),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
   ],
   providers: [],
